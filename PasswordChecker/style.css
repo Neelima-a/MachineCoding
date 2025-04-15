@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --text-color: #00008b93;
+}
+html,
+body {
+  background-color: #f2f2f2;
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+}
+
+h3 {
+  color: #00008b93;
+}
+.container {
+  width: 420px;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgb(0, 0, 0, 0.2);
+}
+
+.container h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+.container form {
+  margin: 20px 5px 10px 5px;
+}
+
+form .field {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+form input {
+  height: 100%;
+  width: 100%;
+  padding-left: 15px;
+  border: 1px solid lightgray;
+  outline: none;
+  border-radius: 5px;
+  font-size: 17px;
+  transition: all 0.3s;
+}
+form input:focus {
+  border-color: #27a360;
+  box-shadow: inset 0 0 3px #2fd072;
+}
+
+form .showBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  display: none;
+}
+
+form .indicator {
+  height: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  display: none;
+}
+
+form .indicator span {
+  width: 100%;
+  height: 100%;
+  background-color: #c3c3c3;
+  border-radius: 5px;
+  position: relative;
+}
+
+form .indicator span.medium {
+  margin: 0 3px;
+}
+
+form .indicator span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+form .indicator span.active.weak:before {
+  background-color: #ff4757;
+}
+
+form .indicator span.active.medium:before {
+  background-color: #fa8628;
+}
+form .indicator span.active.strong:before {
+  background-color: #23ad5c;
+}
+
+form .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: none;
+}
+
+form .text.weak {
+  color: #ff4757;
+}
+
+form .text.medium {
+  color: #fa8628;
+}
+
+form .text.strong {
+  color: #23ad5c;
+}

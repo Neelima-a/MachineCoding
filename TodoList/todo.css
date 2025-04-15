@@ -1,0 +1,120 @@
+:root {
+  --background: #672424;
+  --primary-color: #1c2d5f;
+  --secondary-color: #ffe9e9;
+  --accent-color: #1a2842;
+  --text-color: #f9f9f9;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Segeo UI";
+  font-size: 16pt;
+  color: var(--text-color);
+}
+
+body {
+  min-height: 100vh;
+  padding: 10px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  width: 700px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+#todo-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid var(--secondary-color);
+  font: inherit;
+  caret-color: var(--accent-color);
+  border-radius: 1000px;
+}
+
+#todo-input:focus {
+  outline: none;
+}
+
+form {
+  position: relative;
+}
+
+#add-button {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding: 0 30px;
+  border-radius: 1000px;
+  background-color: var(--primary-color);
+  color: #f3f3e7;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.todo {
+  margin-bottom: 10px;
+  background-color: var(--secondary-color);
+  padding: 0 16px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.todo .todo-text {
+  padding: 15px;
+  padding-right: 0;
+  flex-grow: 1;
+  color: var(--accent-color);
+}
+
+#delete-button {
+  color: rgb(241, 83, 83);
+  border: none;
+  display: flex;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-checkbox {
+  border: 2px solid var(--primary-color);
+  min-width: 20px;
+  border-radius: 50%;
+  min-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+input[type="checkbox"]:checked ~ .custom-checkbox {
+  background-color: var(--primary-color);
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox svg {
+  fill: var(--primary-color);
+}
+
+input[type="checkbox"]:checked ~ .todo-text {
+  text-decoration: line-through;
+  color: var(--primary-color);
+}
+input[type="checkbox"] {
+  display: none;
+}

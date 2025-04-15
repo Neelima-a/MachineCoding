@@ -34,10 +34,8 @@ gameBtnBox.forEach((box) => {
 });
 
 const checkWinner = () => {
-  for (pattern of winnerPatters) {
-    let position1 = gameBtnBox[pattern[0]].innerText;
-    let position2 = gameBtnBox[pattern[1]].innerText;
-    let position3 = gameBtnBox[pattern[2]].innerText;
+  for (let i = 0; i < winnerPatters.length; i++) {
+    let [position1, position2, position3] = pattern[i].innerText;
     if (position1 && position2 && position3) {
       if (position1 === position2 && position2 === position3) {
         showWinner(position1);
